@@ -38,18 +38,20 @@ WARNING: this tool can both miraculously fix your broken progression or it can b
 * **Quest Resolution**: this allows you to view your active quests and advance them as needed to work around bugs or skip quests you don't want to do.  Be warned this may break your game progression if used carelessly.
 
 ***Important**: *Make sure you are on the latest version of the game 1.0.8e or newer*
-### Ver 1.4.15 (Coming Later)
-* **Armies Editor**
-  * Add squads in Army Editor
+### Ver 1.4.15 (Coming Soon)
+### Ver 1.4.14 (beta 1.2.0.h)
+* **Beta Compatibility** now works with Beta 1.2.0h
+* **Bag of Tricks**
+  * Added ability to show, clear and disable corruption
+  * (***KnightOfSeiros***) Added a deraknis-begone option to replace all derakni models, so as deskari-begone
+  * **Dialog**
+    * Fixed issue that caused you to be unable to finish dialog with Nenio in chapter 2 and 5
 * **LevelUp**
   * **Split Class and Feat Prequisite Ignore (Nihilistzsche)**
     * Split the class and feat prerequisite ignore into two separate settings.
-### Ver 1.4.14 (Coming Soon)
-* **Bag of Tricks**
-  * Added ability to show, clear and disable corruption
-  * **Dialog**
-    * Fixed issue that caused you to be unable to finish dialog with Nenio in chapter 2 and 5
-### Ver 1.4.13
+* **Armies Editor**
+  * (***KnightOfSeiros***) Add squads in Army Editor
+### Ver 1.4.13 (current for non beta)
 * **Bag of Tricks**
   * **Quality of Life**
     * **Game Over** - Added toggle to block Game Over when certain companions die in combat, so if ***Leerooooy (Greybor) Jenkins*** runs in and your leader runs in to save him and dies the game does not end unless the whole party wipes.
