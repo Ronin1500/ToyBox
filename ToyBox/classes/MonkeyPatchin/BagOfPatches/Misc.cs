@@ -111,7 +111,7 @@ namespace ToyBox.BagOfPatches {
         public static class ItemSlot_ScrollContent_Patch {
             [HarmonyPostfix]
             private static void Postfix(Kingmaker.UI.ServiceWindow.ItemSlot __instance, ref string __result) {
-                var currentCharacter = UIUtility.GetCurrentCharacter();
+                var currentCharacter = WrathExtensions.GetCurrentCharacter();
                 var component = __instance.Item.Blueprint.GetComponent<CopyItem>();
                 var actionName = component?.GetActionName(currentCharacter) ?? string.Empty;
                 if (!string.IsNullOrWhiteSpace(actionName)) {
@@ -562,7 +562,7 @@ namespace ToyBox.BagOfPatches {
             private static bool Prefix(TurnBasedModeUIController __instance) {
                 if (settings.turnBasedCombatStartDelay == 4f) return true;
                 if (__instance.m_CombatStartWindowVM == null) {
-                    __instance.HideTurnPanel();
+                    __instance.HideCombatStartWindow();
                     __instance.m_CombatStartWindowVM = new CombatStartWindowVM(new Action(__instance.HideCombatStartWindow));
                     __instance.m_Config.CombatStartWindowView.Bind(__instance.m_CombatStartWindowVM);
                     object p = DelayedInvoker.InvokeInTime(new Action(__instance.HideCombatStartWindow), settings.turnBasedCombatStartDelay, true);
@@ -606,7 +606,7 @@ namespace ToyBox.BagOfPatches {
                     var item = __instance.Item;
                     Mod.Debug($"InventorySlotPCView_OnClick_Patch - Using {item.Name}");
                     try {
-                        item.TryUseFromInventory(item.GetBestAvailableUser(), (TargetWrapper)UIUtility.GetCurrentCharacter());
+                        item.TryUseFromInventory(item.GetBestAvailableUser(), (TargetWrapper)WrathExtensions.GetCurrentCharacter());
                     }
                     catch (Exception e) {
                         Mod.Error($"InventorySlotPCView_OnClick_Patch - {e}");
